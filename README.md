@@ -50,9 +50,10 @@ The project includes:
 
 ---
 
+
 ## 🎥 Project Demo
 
-[▶️ Watch ZenVPC Project Demo][https://github.com/user-attachments/assets/db38cb82-6962-43dd-a2ba-4b164](https://github.com/user-attachments/assets/db38cb82-6962-43dd-a2ba-4b16491b72f9)
+https://github.com/user-attachments/assets/db38cb82-6962-43dd-a2ba-4b16491b72f9
 
 ---
 
