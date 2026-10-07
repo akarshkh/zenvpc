@@ -38,7 +38,7 @@ The project includes:
               │                 │
               │  Public Subnet  │
               │  ┌───────────┐  │
-              │  │    EC2     │  │
+              │  │    EC2    │  │
               │  └─────┬─────┘  │
               │        │        │
               │  Private Subnet │
