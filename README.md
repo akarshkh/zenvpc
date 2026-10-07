@@ -1,6 +1,46 @@
-ZenVPC is an AWS-based Virtual Private Cloud (VPC) solution tailored for simplifying cloud 
-application deployment. It leverages AWS services like EC2, RDS, Amplify, and API Gateway 
-to create a secure, scalable, and cost-effective architecture for hosting full-stack 
-applications.
+# ZenVPC — Secure AWS Infrastructure
 
-https://github.com/user-attachments/assets/db38cb82-6962-43dd-a2ba-4b16491b72f9
+ZenVPC is a multi-tier AWS infrastructure project designed to demonstrate secure cloud networking, compute, database deployment, and access control using Amazon Web Services.
+
+The architecture uses public and private subnets to separate application components and database resources while controlling traffic through route tables, an Internet Gateway, security groups, and IAM.
+
+## 🏗️ Architecture
+
+The project includes:
+
+- Amazon VPC
+- Public and private subnets
+- Route tables
+- Internet Gateway
+- Security Groups
+- IAM
+- Amazon EC2
+- Amazon RDS
+- Amazon S3
+- AWS Amplify
+
+### Architecture Overview
+
+```text
+                    Internet
+                       │
+                       ▼
+              ┌─────────────────┐
+              │  AWS Amplify    │
+              │   Frontend      │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │   Amazon VPC    │
+              │                 │
+              │  Public Subnet  │
+              │  ┌───────────┐  │
+              │  │   EC2     │  │
+              │  └─────┬─────┘  │
+              │        │        │
+              │  Private Subnet │
+              │  ┌───────────┐  │
+              │  │    RDS    │  │
+              │  └───────────┘  │
+              └─────────────────┘
