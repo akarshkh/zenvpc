@@ -24,28 +24,37 @@ The project includes:
 ## Architecture Overview
 
 ```text
-                    Internet
-                       │
-                       ▼
-              ┌─────────────────┐
-              │   AWS Amplify   │
-              │    Frontend     │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │   Amazon VPC    │
-              │                 │
-              │  Public Subnet  │
-              │  ┌───────────┐  │
-              │  │    EC2    │  │
-              │  └─────┬─────┘  │
-              │        │        │
-              │  Private Subnet │
-              │  ┌───────────┐  │
-              │  │    RDS    │  │
-              │  └───────────┘  │
-              └─────────────────┘
+                  
+                         Internet
+                            |
+                 +----------------------+
+                 |    AWS Amplify       |
+                 |  Frontend Hosting    |
+                 +----------+-----------+
+                            |
+                     API / HTTP Requests
+                            |
+                            v
+              +-----------------------------+
+              |          Amazon VPC         |
+              |                             |
+              |      Public Subnet          |
+              |   +-------------------+     |
+              |   |   Amazon EC2       |    |
+              |   | Backend / App      |    |
+              |   +---------+---------+     |
+              |             |               |
+              |      Database Connection    |
+              |             |               |
+              |             v               |
+              |      Private Subnet         |
+              |   +-------------------+     |
+              |   |   Amazon RDS       |    |
+              |   | Database           |    |
+              |   +-------------------+     |
+              |                             |
+              +-----------------------------+
+
 ```
 
 ---
